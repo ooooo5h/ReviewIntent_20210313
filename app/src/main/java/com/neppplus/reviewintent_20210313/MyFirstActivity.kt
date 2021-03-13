@@ -20,4 +20,3 @@ class MyFirstActivity : AppCompatActivity() {
 
         }
     }
-}

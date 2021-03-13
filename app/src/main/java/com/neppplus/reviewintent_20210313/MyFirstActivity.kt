@@ -11,8 +11,12 @@ class MyFirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_my_first)
 
         backToMainBtn.setOnClickListener {
-            val myIntent = Intent(this, MainActivity::class.java)
-            startActivity(myIntent)
+//            복귀용 화면 종류 코드
+            finish()
+            
+        }
+
+
 
         }
     }

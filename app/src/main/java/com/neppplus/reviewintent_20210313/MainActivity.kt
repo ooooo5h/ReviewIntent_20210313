@@ -19,5 +19,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
         }
+
+
+
+        moveToSecondBtn.setOnClickListener {
+//            화면 이동인건 동일 => Intent 기초 사용법은 그대로 적용
+
+//            비행기 티켓팅
+            val myIntent = Intent(this, MySecondActivity::class.java)
+
+//            비행기 탑승승
+            startActivty(myIntent)
+
+        }
     }
 }

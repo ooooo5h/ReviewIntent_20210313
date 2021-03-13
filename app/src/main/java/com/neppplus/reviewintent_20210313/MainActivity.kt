@@ -11,7 +11,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         moveToFirstBtn.setOnClickListener {
+
+//            출발지/목적지 정보 : 비행기 티켓 발권
             val myIntent = Intent( this, MyFirstActivity::class.java)
+
+//           티켓 들고 비행기 탑승
             startActivity(myIntent)
 
         }

@@ -35,7 +35,13 @@ class MainActivity : AppCompatActivity() {
 
 //            비행기 탑승
 //            startActivty(myIntent)
+        }
+
+        editNickBtn.setOnClickListener {
+
+            val myIntent = Intent(this, EditNicknameMainActivity::class.java)
 
         }
+
     }
 }

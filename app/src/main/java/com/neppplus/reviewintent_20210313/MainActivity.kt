@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
         dialBtn.setOnClickListener {
 
 //            입력한 폰번이 뭔지?
@@ -63,10 +64,14 @@ class MainActivity : AppCompatActivity() {
 //            실제 화면 이동
             startActivity(myIntent)
 
-
         }
 
-
+        callBtn.setOnClickListener {
+            val phoneNum = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("tel:${phoneNum}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+        }
 
 
     }

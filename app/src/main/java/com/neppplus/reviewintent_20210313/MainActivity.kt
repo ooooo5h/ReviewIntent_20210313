@@ -2,6 +2,7 @@ package com.neppplus.reviewintent_20210313
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -47,6 +48,26 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(myIntent, REQ_FOR_NICKNAME)
 
         }
+
+        dialBtn.setOnClickListener {
+
+//            입력한 폰번이 뭔지?
+            val inputPhoneNum = phoneNumEdt.text.toString()
+
+//            Uri - 어디로 전화를 걸 건지 등 세부 정부 표현
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+
+//            Intent 생성 => 출발지/도착지 대신, 안드로이드의 어떤 기능(Action)? + 세부 정보 (uri)?
+            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+
+//            실제 화면 이동
+            startActivity(myIntent)
+
+
+        }
+
+
+
 
     }
 
